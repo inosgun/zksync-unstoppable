@@ -1,0 +1,12 @@
+# install dependencies
+$ bash cli-dev.sh ci
+
+# Populate .env file as of ropsten-beta connection && serve with hot reload at localhost:3000
+$ yarn ci:prepare:ropsten-beta
+
+# static version generation
+$ yarn ci:build:ropsten-beta
+# afterward you'll have prepared distributive in /public folder
+
+$ cd public
+$ vercel .
